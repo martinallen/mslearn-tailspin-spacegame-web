@@ -14,7 +14,7 @@ steps:
   inputs:
     azureSubscription: 'PipeLineConnection'
     KeyVaultName: 'martinallenkeyvault'
-    SecretsFilter: '*'
+    SecretsFilter: 'sqldbpassword, Test'
 
 - task: DotNetCoreInstaller@0
   displayName: 'Use .NET Core SDK $(dotnetSdkVersion)'
