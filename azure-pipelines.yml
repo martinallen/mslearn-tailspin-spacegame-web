@@ -14,6 +14,13 @@ steps:
   inputs:
     version: '$(dotnetSdkVersion)'
 
+
+- task: AzureKeyVault@1
+  inputs:
+    azureSubscription: 'allen(862c7eb3-780c-493d-baa9-a24da63777ab)'
+    KeyVaultName: 'martinallenkeyvault'
+    SecretsFilter: '*'
+
 - task: Npm@1
   displayName: 'Run npm install'
   inputs:
