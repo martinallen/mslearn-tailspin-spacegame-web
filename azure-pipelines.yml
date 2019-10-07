@@ -14,7 +14,7 @@ steps:
   inputs:
     azureSubscription: 'PipeLineConnection'
     KeyVaultName: 'martinallenkeyvault'
-    SecretsFilter: 'sqldbpassword, Test'
+    SecretsFilter: 'sqldbpassword'
 
 - task: Bash@3
   inputs:
