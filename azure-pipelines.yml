@@ -16,8 +16,11 @@ steps:
     KeyVaultName: 'martinallenkeyvault'
     SecretsFilter: 'sqldbpassword, Test'
 
-
-
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      echo '$(sqldbpassword)'
 
 - task: DotNetCoreInstaller@0
   displayName: 'Use .NET Core SDK $(dotnetSdkVersion)'
