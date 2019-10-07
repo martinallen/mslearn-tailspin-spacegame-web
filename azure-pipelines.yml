@@ -16,7 +16,7 @@ steps:
 
 - task: AzureKeyVault@1
   inputs:
-    azureSubscription: 'allen(862c7eb3-780c-493d-baa9-a24da63777ab)'
+    azureSubscription: 'PipeLineZ'
     KeyVaultName: 'martinallenkeyvault'
     SecretsFilter: '*'
 
