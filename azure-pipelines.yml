@@ -9,6 +9,13 @@ variables:
   dotnetSdkVersion: '2.1.505'
 
 steps:
+
+- task: AzureKeyVault@1
+  inputs:
+    azureSubscription: 'PipeLineConnection'
+    KeyVaultName: 'martinallenkeyvault'
+    SecretsFilter: '*'
+
 - task: DotNetCoreInstaller@0
   displayName: 'Use .NET Core SDK $(dotnetSdkVersion)'
   inputs:
